@@ -1,4 +1,4 @@
-const games = require('../data/games');
+import games from '../data/games';
 
 const getAllGames = () => {
     return games;
@@ -8,7 +8,7 @@ const getGameById = (id) => {
     return games.find(game => game.id === parseInt(id));
 };
 
-module.exports = {
+export default {
     getAllGames,
     getGameById
 };
