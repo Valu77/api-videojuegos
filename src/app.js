@@ -1,10 +1,10 @@
-const express = require('express');
-const gameRoutes = require('./routes/gameRoutes');
+import express, { json } from 'express';
+import gameRoutes from './routes/gameRoutes';
 
 const app = express();
 const PORT = 3000;
 
-app.use(express.json());
+app.use(json());
 
 // Usar las rutas
 app.use('/api/games', gameRoutes);
